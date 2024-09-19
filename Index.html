@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standoff 2 Tournament</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        #tournaments {
+            padding: 20px;
+        }
+
+        #application-form {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        #application-form h2 {
+            color: #333;
+        }
+
+        #application-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        #application-form input,
+        #application-form select,
+        #application-form textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #application-form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #application-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sekcja Turniejów -->
+    <section id="tournaments">
+        <h1>Turnieje Standoff 2</h1>
+        <!-- Tutaj wstaw kod do wyświetlania tabeli wyników i komunikacji -->
+    </section>
+
+    <!-- Sekcja Formularza Aplikacyjnego -->
+    <section id="application-form">
+        <h2>Składanie Podań</h2>
+        <form action="/submit-application" method="POST">
+            <label for="name">Imię i Nazwisko:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Adres E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="role">Rola, na którą aplikujesz:</label>
+            <select id="role" name="role">
+                <option value="team_member">Członek drużyny</option>
+                <option value="coach">Trener</option>
+                <option value="admin">Administrator</option>
+            </select>
+
+            <label for="message">Motywacja:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Wyślij</button>
+        </form>
+    </section>
+</body>
+</html>
